@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+.header, .body, .footer{
+    display: flex;
+    justify-content: center;
+}
+.page-width{
+    width: 500px;
+    background-color: #bbbbdd !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+.page-width .nav{
+    display: inline;
+    border: 1px solid #949090;
+    margin-right: 10px;
+}
+.active{
+    background-color: #a1ccf1;
+}
+.body{
+    margin: 0px 20px 0px 20px;
+}
+.cardPIN{
+    margin-top: 10px;;
+}
+.form-control{
+    display: block;
+}
+.btn{
+    margin-top: 10px;
+    background-color: blue;
+    margin-right: 10px;
+}
+.cancel{
+    background-color: gray;
+}
+.btn:disabled{
+    background-color: ivory;
+}
+.error{
+    border: 1px solid red;
+}
+img{
+    margin-right: 20px;
+}

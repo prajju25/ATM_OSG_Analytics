@@ -1,0 +1,8 @@
+<div class="page-width">
+    <div *ngFor="let rupee of map">
+        {{rupee.count}} notes of Rs.{{rupee.rupees}}
+    </div>
+    <div>    
+        <button class="btn cancel" (click)="cancel()">Cancel</button>
+    </div>
+</div>

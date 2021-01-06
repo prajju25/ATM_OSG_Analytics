@@ -1,0 +1,24 @@
+<div class="page-width">
+    <form #authForm="ngForm" (ngSubmit)="submit(authForm)">
+        <div class="form-group">
+            <label for="cardNumber">
+                Card Number
+            </label><input class="form-control" [ngClass]="{'error': cardNumber.invalid && cardNumber.touched}"
+            type="number" id="cardNumber" name="cardNumber" [(ngModel)]="cardNo" #cardNumber="ngModel" required number maxlength="16">
+        </div>
+        <div class="cardPIN form-group">
+            <label for="cardPIN">
+                Card PIN
+            </label><input class="form-control" [ngClass]="{'error': cardPIN.invalid && cardPIN.touched}"
+            type="password" id="cardPIN" name="cardPIN" [(ngModel)]="pin" #cardPIN="ngModel" required number maxlength="4">
+        </div>
+        <div>
+            <button class="btn" [disabled]="!(authForm.valid)">Submit</button>
+        </div>
+        <div class="errors.length > 0">
+            <ul style="color:red">
+                <li *ngFor="let error of errors">{{error}}</li>
+            </ul>
+        </div>
+    </form>
+</div>

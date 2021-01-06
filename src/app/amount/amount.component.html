@@ -1,0 +1,19 @@
+<div class="page-width">
+    <form #amountForm="ngForm" (ngSubmit)="submit(amountForm)">
+        <div class="form-group">
+            <label for="rupees">
+                Enter your amount
+            </label><input class="form-control" [ngClass]="{'error': rupees.invalid && rupees.touched}"
+            type="number" id="rupees" name="rupees" [(ngModel)]="amount" #rupees="ngModel" required number>
+        </div>
+        <div>
+            <button class="btn" [disabled]="!(amountForm.valid)">Submit</button>
+            <button class="btn cancel" (click)="cancel()">Cancel</button>
+        </div>
+        <div class="msg.length > 0">
+            <ul style="color:red">
+                <li *ngFor="let error of msg">{{error}}</li>
+            </ul>
+        </div>
+    </form>
+</div>
